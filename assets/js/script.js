@@ -15,12 +15,12 @@ filterBtns.forEach(btn => {
     filterBtns.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    const category = btn.textContent.trim();
+    const category = btn.getAttribute("data-filter-btn"); // use attribute
 
     projectCards.forEach(card => {
       const tag = card.querySelector(".card-tag").textContent.trim();
 
-      if (tag === category) {
+      if (category === "all" || tag === category) {
         card.parentElement.style.display = "block";
       } else {
         card.parentElement.style.display = "none";
@@ -28,6 +28,7 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
 //  News
 const form = document.getElementById('newsletterForm');
 const successMsg = document.getElementById('newsletterSuccess');
