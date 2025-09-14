@@ -25,6 +25,7 @@
   --raisin-black-1: hsl(240, 8%, 17%);
   --raisin-black-2: hsl(240, 8%, 12%);
   --majorelle-blue: hsl(241, 77%, 63%);
+  --majorelle-violet: #4E0080;
   --blue-ryb_80: hsla(241, 88%, 60%, 0.8);
   --bittersweet: hsl(0, 100%, 69%);
   --eerie-black: hsl(0, 0%, 13%);
@@ -267,7 +268,7 @@ body {
 .btn:is(:hover, :focus)::after { transform-origin: left; }
 
 .btn-primary {
-  background-color: var(--majorelle-blue);
+  background-color: var(--majorelle-violet);
   color: var(--white);
 }
 
@@ -924,7 +925,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  background-color: var(--majorelle-blue);
+  background-color: var(--majorelle-violet);
   color: var(--white);
   font-size: 18px;
   padding: 16px;
