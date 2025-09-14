@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Creativebroz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #4E0080, rgb(108, 6, 171));
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      width: 400px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card-header h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #222;
+    }
+
+    .card-header small {
+      color: #777;
+    }
+
+    .card-body {
+      padding: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .card-body h3 {
+      margin: 15px 0 8px;
+      font-size: 1rem;
+      color: #4E0080;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px 20px;
+      border-top: 1px solid #eee;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 2px solid transparent;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-accept {
+      background: #4E0080;
+      color: #fff;
+      border-color: #4E0080;
+    }
+
+    .btn-accept:hover {
+      background: #8c22ce;
+    }
+
+    .thank-you {
+      padding: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #4E0080;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="privacyCard">
+    <div class="card-header">
+      <h2>Privacy Policy</h2>
+      <small>Last updated: September 2025</small>
+    </div>
+
+    <div class="card-body" id="privacyBody">
+      <h3>1. Information We Collect</h3>
+      <p>We may collect personal details such as your name, email, contact number, and business information when you engage with our services.</p>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use your information to provide and improve our services, communicate with you, and send updates or promotional offers.</p>
+
+      <h3>3. Data Protection</h3>
+      <p>We implement appropriate security measures to protect your personal information from unauthorized access, use, or disclosure.</p>
+
+      <h3>4. Sharing of Information</h3>
+      <p>We do not sell or trade your personal information. Data may be shared only with trusted partners necessary to deliver our services.</p>
+
+      <h3>5. Your Rights</h3>
+      <p>You may request access, correction, or deletion of your personal data at any time by contacting us.</p>
+
+      <h3>6. Updates to Policy</h3>
+      <p>We may update this Privacy Policy occasionally. Please revisit this page to stay informed.</p>
+    </div>
+
+    <div class="card-footer" id="privacyFooter">
+      <label>
+        <input type="checkbox" id="acceptPrivacy"> I have read & agree to the Privacy Policy
+      </label>
+      <button class="btn btn-accept" onclick="acceptPrivacyPolicy()">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    function acceptPrivacyPolicy() {
+      const checkbox = document.getElementById("acceptPrivacy");
+      if (!checkbox.checked) {
+        alert("Please check the box before continuing.");
+        return;
+      }
+      document.getElementById("privacyBody").innerHTML = `
+        <div class="thank-you">
+          ✅ Thanks for understanding and accepting our Privacy Policy.
+        </div>
+      `;
+      document.getElementById("privacyFooter").style.display = "none";
+      setTimeout(() => {
+        window.location.href = "index.html"; // redirect home
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
